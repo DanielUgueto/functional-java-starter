@@ -40,35 +40,13 @@ class Lesson4OptionalTest {
     }
 
     @Test
-    void searchProductsFindsAffordableProducts() {
-        List<String> affordable = searchProducts(
-                products,
-                product -> product.price() < 500,
-                Product::name,
-                3);
-
-        assertEquals(List.of("Pen", "Notebook", "Java Basics"), affordable);
+    void productLabelShowsAnAffordableProduct() {
+        assertEquals("Clean Code (300 kr)", productLabel(products, "Clean Code"));
     }
 
     @Test
-    void searchProductsUsesTheFormatter() {
-        List<String> electronics = searchProducts(
-                products,
-                product -> product.category().equals("Electronics"),
-                product -> product.name() + " - " + product.price() + " kr",
-                5);
-
-        assertEquals(List.of("Mouse - 200 kr", "Laptop - 8000 kr"), electronics);
-    }
-
-    @Test
-    void searchProductsReturnsAnEmptyListWhenNothingMatches() {
-        List<String> missing = searchProducts(
-                products,
-                product -> product.category().equals("Clothing"),
-                Product::name,
-                5);
-
-        assertEquals(List.of(), missing);
+    void productLabelIsNotAvailableWhenTooExpensiveOrMissing() {
+        assertEquals("Not available", productLabel(products, "Laptop"));
+        assertEquals("Not available", productLabel(products, "Keyboard"));
     }
 }

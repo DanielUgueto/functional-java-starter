@@ -21,10 +21,11 @@ class Lesson1LambdasTest {
     }
 
     @Test
-    void addFeeAddsTheFee() {
-        PriceRule bookingFee = addFee(25);
+    void combineAppliesTheFirstRuleAndThenTheSecond() {
+        PriceRule discount = percentageDiscount(10);
+        PriceRule bookingFee = price -> price + 25;
 
-        assertEquals(225.0, bookingFee.apply(200));
-        assertEquals(325.0, bookingFee.apply(300));
+        assertEquals(205.0, combine(discount, bookingFee).apply(200));
+        assertEquals(202.5, combine(bookingFee, discount).apply(200));
     }
 }

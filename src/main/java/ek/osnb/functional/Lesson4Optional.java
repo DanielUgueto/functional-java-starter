@@ -1,9 +1,8 @@
 package ek.osnb.functional;
 
 import java.util.*;
-import java.util.function.*;
 
-/** Lesson 4: Optional and practice. Run Lesson4OptionalTest to check your methods. */
+/** Lesson 4: Optional. Run Lesson4OptionalTest to check your methods. */
 public class Lesson4Optional {
 
     /** Exercise 1: the first product with the given name, or an empty Optional. */
@@ -20,29 +19,28 @@ public class Lesson4Optional {
     }
 
     /**
-     * Final exercise: the products that match the condition, cheapest first,
-     * at most limit of them, each one turned into a String by the formatter.
+     * Exercise 4: "Name (Price kr)" if the product exists and costs less than 500 kr.
+     * Otherwise "Not available".
      */
-    static List<String> searchProducts(
-            List<Product> products,
-            Predicate<Product> condition,
-            Function<Product, String> formatter,
-            int limit
-    ) {
+    static String productLabel(List<Product> products, String name) {
         throw new UnsupportedOperationException("TODO");
     }
 
     public static void main(String[] args) {
         List<Product> products = SampleData.products();
 
-        // Exercise 1: test findProduct() with "Laptop" and "Keyboard"
+        // Exercise 1: test findProduct() with "Laptop" and "Keyboard", then orElse() with a fallback product
 
 
         // Exercise 2: findProduct(), map() and orElse()
         // Expected: 8000, Office, NOT FOUND
 
 
-        // Try it: Optional.filter() with "Clean Code", "Laptop" and "Keyboard"
+        // Exercise 3: test requireProduct() with "Laptop" and "Keyboard"
+
+
+        // Exercise 4: test productLabel() with "Clean Code", "Laptop" and "Keyboard"
+        // Expected: Clean Code (300 kr), Not available, Not available
 
 
     }

@@ -1,6 +1,6 @@
 package ek.osnb.functional;
 
-/** Lesson 1: Lambdas. Run Lesson1LambdasTest to check Exercise 3. */
+/** Lesson 1: Lambdas. Run Lesson1LambdasTest to check Exercise 3 and the Challenge. */
 public class Lesson1Lambdas {
 
     static double calculatePrice(double price, PriceRule rule) {
@@ -16,8 +16,8 @@ public class Lesson1Lambdas {
         throw new UnsupportedOperationException("TODO");
     }
 
-    /** Exercise 3 (if you finish early): a rule that adds the fee to the price. */
-    static PriceRule addFee(double fee) {
+    /** Challenge: a rule that applies first and then second. */
+    static PriceRule combine(PriceRule first, PriceRule second) {
         throw new UnsupportedOperationException("TODO");
     }
 
@@ -28,8 +28,16 @@ public class Lesson1Lambdas {
         // Expected: 240.0, 250.0, 325.0
 
 
-        // Exercise 2: halfPrice, addShipping, minimumPrice
+        // Exercise 2: halfPrice, addShipping and minimumPrice
         // Expected: 100.0, 239.0, 100.0, 150.0
+
+
+        // Exercise 3: test fixedDiscount()
+        // Expected: 150.0, 50.0
+
+
+        // Challenge: test combine()
+        // Expected: 175.0
 
 
     }
