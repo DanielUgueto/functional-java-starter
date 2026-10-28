@@ -22,8 +22,6 @@ public class Lesson1Lambdas {
     }
 
     public static void main(String[] args) {
-        System.out.println(calculatePrice(200, price -> price * 0.90)); // 180.0
-
         // Exercise 1: use calculatePrice() with a lambda
         // Expected: 240.0, 250.0, 325.0
 
