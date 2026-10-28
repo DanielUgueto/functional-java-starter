@@ -1,8 +1,8 @@
-package ek.osnb.functional;
+package ek.osnb.functional.exercises;
 
 import org.junit.jupiter.api.Test;
 
-import static ek.osnb.functional.Lesson1Lambdas.*;
+import static ek.osnb.functional.exercises.Lesson1Lambdas.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Lesson1LambdasTest {

@@ -1,10 +1,10 @@
-package ek.osnb.functional;
+package ek.osnb.functional.exercises;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static ek.osnb.functional.Lesson3Streams.*;
+import static ek.osnb.functional.exercises.Lesson3Streams.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Lesson3StreamsTest {

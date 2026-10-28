@@ -1,11 +1,11 @@
-package ek.osnb.functional;
+package ek.osnb.functional.exercises;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import static ek.osnb.functional.Lesson2Interfaces.*;
+import static ek.osnb.functional.exercises.Lesson2Interfaces.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Lesson2InterfacesTest {

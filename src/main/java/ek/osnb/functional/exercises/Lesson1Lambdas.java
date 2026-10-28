@@ -1,4 +1,4 @@
-package ek.osnb.functional;
+package ek.osnb.functional.exercises;
 
 /** Lesson 1: Lambdas. Run Lesson1LambdasTest to check Exercise 3 and the Challenge. */
 public class Lesson1Lambdas {

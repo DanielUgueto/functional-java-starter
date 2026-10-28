@@ -1,4 +1,4 @@
-package ek.osnb.functional;
+package ek.osnb.functional.exercises;
 
 import java.util.*;
 

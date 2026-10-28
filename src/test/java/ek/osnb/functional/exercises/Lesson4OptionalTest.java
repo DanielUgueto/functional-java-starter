@@ -1,11 +1,11 @@
-package ek.osnb.functional;
+package ek.osnb.functional.exercises;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Optional;
 
-import static ek.osnb.functional.Lesson4Optional.*;
+import static ek.osnb.functional.exercises.Lesson4Optional.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
