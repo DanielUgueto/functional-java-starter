@@ -13,7 +13,12 @@ public class Lesson3Streams {
      * cheapest first, at most limit of them.
      */
     static List<String> searchProducts(List<Product> products, Predicate<Product> condition, int limit) {
-        throw new UnsupportedOperationException("TODO");
+        return products.stream()
+                .filter(condition)
+                .sorted(Comparator.comparingInt(Product::price))
+                .limit(limit)
+                .map(Product::name)
+                .toList();
     }
 
     public static void main(String[] args) {
@@ -112,10 +117,21 @@ public class Lesson3Streams {
 
         System.out.println("2.4 " + totalPriceByCategory);
 
+        System.out.println();
 
         // Exercise 3: test searchProducts()
         // Expected: [Pen, Notebook, Java Basics]
+        System.out.println("Exercise 3");
 
+        System.out.println(searchProducts(products, p -> p.price() < 500, 3));
+
+        System.out.println("BONUS");
+
+        System.out.println(products.stream()
+                .filter(p -> p.category().equals("Books"))
+                .mapToInt(Product::price)
+                .average()
+                .orElse(0));  // 225.0
 
     }
 }

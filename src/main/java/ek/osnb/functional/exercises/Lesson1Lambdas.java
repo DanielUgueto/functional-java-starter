@@ -18,7 +18,7 @@ public class Lesson1Lambdas {
 
     /** Challenge: a rule that applies first and then second. */
     static PriceRule combine(PriceRule first, PriceRule second) {
-        return price -> first.apply(second.apply(price));
+        return price -> second.apply(first.apply(price));
     }
 
     public static void main(String[] args) {
